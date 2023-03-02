@@ -42,6 +42,25 @@
             }
         }
         </script>
+        <div id = "container">
+            <img src="Abelia.webp" id = "image" onclick = "selectImage()" style=" height: 100px; width: 100px;" alt="Abelia">
+          </div>
+          <script>
+            var useImage = 1;
+            function selectImage (){
+              switch (useImage){
+                case 1 : useImage = useImage+1;
+                  document.getElementById('image').src = "Abelia.webp"
+                  break;
+                case 2: useImage = useImage+1;
+                  document.getElementById('image').src = "Red star cordyline.webp";
+                  break;
+                case 3: useImage = 1;
+                  document.getElementById('image').src = "Abelia.webp";
+                  break;
+              }
+            }
+          </script>
     </body>
 
 </html>
