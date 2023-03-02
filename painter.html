@@ -22,6 +22,7 @@
         <script> 
         good=0
         oops=0
+        count=0;
         function checkPainter() {
             console.log("Getting form values")
             painter = document.getElementById("form1_pwd").value
@@ -35,10 +36,17 @@
                 alert("You got it right")
                 
             } else {
-                oops++
+                oops++;
+                count++;
+                if(count>10){
+                  document.getElementById("result").onclick = guessMethod()
+                }
                 out.innerHTML = oops
                 alert("sorry")
                
+            }
+            function guessMethod(){
+              out.innerHTML = alert("Sorry, ran out of guesses")
             }
         }
         </script>
